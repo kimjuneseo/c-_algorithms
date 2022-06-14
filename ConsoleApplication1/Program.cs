@@ -101,23 +101,18 @@ namespace ConsoleApplication1
             int star = 0;
             int lineCnt = 9;
             for (int line = 0; line < lineCnt; line++) {
+
                 if (lineCnt / 2 >= line) star = star == 0 ? 1 : line * 2 + 1;
                 else star = star - (line - 1) / 2 < 0 ? 1 : star - (line - 1) / 2;
+
                 space = lineCnt - star;
                 for (int j = 1; j <=  lineCnt; j++)
                 { 
-                    if (space / 2 >= j || lineCnt - space/2 < j)
-                    {
-                        Console.Write(" ");
-                     }
-                     else
-                     {
-                         Console.Write("*");
-                     }
+                    if (space / 2 >= j || lineCnt - space/2 < j) Console.Write(" ");
+                     else Console.Write("*");     
                 }
                 Console.WriteLine("");
              }
-            //for()
         }
 
         // 두 수를 입력받아 곱셈
