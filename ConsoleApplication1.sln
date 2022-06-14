@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{AB72682C-48BE-480E-B294-B8A0B2EDF06D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "math", "math\math.csproj", "{176F25B0-B617-4117-A024-91E369DD67FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,10 @@ Global
 		{AB72682C-48BE-480E-B294-B8A0B2EDF06D}.Debug|x86.Build.0 = Debug|x86
 		{AB72682C-48BE-480E-B294-B8A0B2EDF06D}.Release|x86.ActiveCfg = Release|x86
 		{AB72682C-48BE-480E-B294-B8A0B2EDF06D}.Release|x86.Build.0 = Release|x86
+		{176F25B0-B617-4117-A024-91E369DD67FB}.Debug|x86.ActiveCfg = Debug|x86
+		{176F25B0-B617-4117-A024-91E369DD67FB}.Debug|x86.Build.0 = Debug|x86
+		{176F25B0-B617-4117-A024-91E369DD67FB}.Release|x86.ActiveCfg = Release|x86
+		{176F25B0-B617-4117-A024-91E369DD67FB}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,4 @@
+C:\Users\GEM_JSKIM\Documents\Visual Studio 2010\Projects\ConsoleApplication1\math\bin\Debug\math.exe
+C:\Users\GEM_JSKIM\Documents\Visual Studio 2010\Projects\ConsoleApplication1\math\bin\Debug\math.pdb
+C:\Users\GEM_JSKIM\Documents\Visual Studio 2010\Projects\ConsoleApplication1\math\obj\x86\Debug\math.exe
+C:\Users\GEM_JSKIM\Documents\Visual Studio 2010\Projects\ConsoleApplication1\math\obj\x86\Debug\math.pdb

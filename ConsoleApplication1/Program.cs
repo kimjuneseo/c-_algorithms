@@ -45,6 +45,18 @@ namespace ConsoleApplication1
             //pr.gcmLcmFindFn(10, 15);
             // 다이아몬드
             //pr.diamond();
+            
+
+           
+            // 최대공약수,최소공배수 입력받아서 출력
+            Console.Write("첫번째 수를 입력하세요: ");
+            int x = int.Parse(Console.ReadLine());
+            Console.Write("두번째 수를 입력하세요: ");
+            int y = int.Parse(Console.ReadLine());
+            int[] returnArr = pr.gcmLcmFindFn(x, y);
+            Console.Write("최대공약수=" + returnArr[0] + "최소공배수=" +  returnArr[1]);
+            
+
             // 피보나치 수열
             //pr.fibonacciSequence();
 
@@ -62,15 +74,26 @@ namespace ConsoleApplication1
         }
 
         // 두 수를 입력 받아 최대공약수, 최소공배수 구하기
-        public void gcmLcmFindFn(int firstNum, int lastNum)
-        {
-            firstNum /= 2;
-            lastNum  /= 2;
+        public int[] gcmLcmFindFn(int n, int m) {
+            int min = n < m ? n : m;
+            int max = n < m ? m : n;
             
-            Console.Write(firstNum + " " + lastNum);
-            
+            //최대공약수 -> 유클리드 호제법 gcd(n, m) = gcd(m, n%m)
+            min = gcd(n, m);
+            //최소공배수 -> 두수의 곱 / 최대 공약수
+            max = (n * m) / min;
+            int[] returnArr = new int[2] {min,max};
+            return returnArr;
+    }
 
-        }
+    public int gcd(int n, int m)
+    {
+        //두 수 n, m 이 있을 때 어느 한 수가 0이 될 때 까지
+        //gcd(m, n%m) 의 재귀함수 반복
+        if(m==0) return n;
+        else return gcd(m, n%m);
+    }
+
         // 다이아몬드 
         public void diamond()
         {
