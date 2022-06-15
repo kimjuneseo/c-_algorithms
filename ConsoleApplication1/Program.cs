@@ -29,35 +29,43 @@ namespace ConsoleApplication1
        static void Main(string[] args)
        {
             Program pr = new Program();
-           // 오버라이딩
-            Childe Cr = new Childe();
-            DataTable table = getData();
-           // dataset 출력
-           // DataRow[] datas =  table.Select();
-           // foreach(DataRow i in datas){
-           //     Console.Write(i["index"] + " " );
-           //      Console.Write(i["sex"] + " ");
-           //      Console.Write(i["name"]+ "\n");     
-           // }
 
-            // 오버로딩
-            //Console.Write(Cr.sumFn(5, 6));
-            //pr.gcmLcmFindFn(10, 15);
-            // 다이아몬드
-            //pr.diamond();
+            // 1. 구구단 출력
+            // pr.sum();
+
+            // 2.최대공약수,최소공배수 입력받아서 출력
+
+            // Console.Write("첫번째 수를 입력하세요: ");
+            // int x = int.Parse(Console.ReadLine());
+            // Console.Write("두번째 수를 입력하세요: ");
+            // int y = int.Parse(Console.ReadLine());
+            // int[] returnArr = pr.gcmLcmFindFn(x, y);
+            // Console.Write("최대공약수=" + returnArr[0] + "최소공배수=" +  returnArr[1]);
             
-
            
-            // 최대공약수,최소공배수 입력받아서 출력
-            Console.Write("첫번째 수를 입력하세요: ");
-            int x = int.Parse(Console.ReadLine());
-            Console.Write("두번째 수를 입력하세요: ");
-            int y = int.Parse(Console.ReadLine());
-            int[] returnArr = pr.gcmLcmFindFn(x, y);
-            Console.Write("최대공약수=" + returnArr[0] + "최소공배수=" +  returnArr[1]);
+            // 3. 다이아몬드
+            // pr.diamond();
+
+            // 4. 오버라이딩
+            //Childe Cr = new Childe();
+            //Console.Write(Cr.sumFn(5, 6));
+     
+
+            // 5. 오버로딩
+           // Console.Write(pr.sumFn(5, 6));
             
 
-            // 피보나치 수열
+            // 6. dataset 출력
+            // DataTable table = getData();
+            // DataRow[] datas =  table.Select();
+            // foreach(DataRow i in datas){
+            //     Console.Write(i["index"] + " " );
+            //      Console.Write(i["sex"] + " ");
+            //      Console.Write(i["name"]+ "\n");     
+            // }
+           
+
+            // 번외 피보나치 수열
             //pr.fibonacciSequence();
 
         }
@@ -70,6 +78,7 @@ namespace ConsoleApplication1
                    for (int y = 1; y <= 9; y++) {
                         Console.WriteLine(i + "x" + y +"="+ i*y);
                    }
+                   Console.WriteLine("");
                }
         }
 
@@ -86,7 +95,7 @@ namespace ConsoleApplication1
             return returnArr;
     }
 
-    public int gcd(int n, int m)
+        public int gcd(int n, int m)
     {
         //두 수 n, m 이 있을 때 어느 한 수가 0이 될 때 까지
         //gcd(m, n%m) 의 재귀함수 반복
@@ -136,6 +145,20 @@ namespace ConsoleApplication1
             return x * y * z;
         }
 
+        //dataset colum추가 row추가
+        static DataTable getData()
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add("index", typeof(int));
+            table.Columns.Add("sex", typeof(string));
+            table.Columns.Add("name", typeof(string));
+
+            table.Rows.Add(1, "여", "주희");
+            table.Rows.Add(2, "남", "창식");
+            table.Rows.Add(3, "여", "명희");
+            return table;
+        }
+
 
         // 피보나치 수열
         int fiboCount = 0;
@@ -154,19 +177,8 @@ namespace ConsoleApplication1
                 Console.Write(i +" ");
             }
         }
-        //dataset colum추가 row추가
-        static DataTable getData()
-        {
-            DataTable table = new DataTable();
-            table.Columns.Add("index", typeof(int));
-            table.Columns.Add("sex", typeof(string));
-            table.Columns.Add("name", typeof(string));
 
-            table.Rows.Add(1, "여", "주희");
-            table.Rows.Add(2, "남", "창식");
-            table.Rows.Add(3, "여", "명희");
-            return table;
-        }
+  
             
             
         }
