@@ -43,7 +43,7 @@ namespace ConsoleApplication1
             Program pr = new Program();
 
             // 1. 구구단 출력
-            // pr.sum(); // pr의 인스턴스 생성
+            // pr.sum(); // pr의 인스턴스 생성한다
 
             // 2.최대공약수,최소공배수 입력받아서 출력
 
